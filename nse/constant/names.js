@@ -1,0 +1,38 @@
+// NSE Index (slugs)
+
+var slugs = {
+  'NIFTY 50': 'nifty',
+  'NIFTY NEXT 50': 'juniorNifty',
+  'NIFTY MIDCAP 50': 'niftyMidcap50',
+  'NIFTY AUTO': 'cnxAuto',
+  'NIFTY BANK': 'bankNifty',
+  'NIFTY ENERGY': 'cnxEnergy',
+  'NIFTY FIN SERVICE': 'cnxFinance',
+  'NIFTY FMCG': 'cnxFMCG',
+  'NIFTY IT': 'cnxit',
+  'NIFTY MEDIA': 'cnxMedia',
+  'NIFTY METAL': 'cnxMetal',
+  'NIFTY PHARMA': 'cnxPharma',
+  'NIFTY PSU BANK': 'cnxPSU',
+  'NIFTY REALTY': 'cnxRealty',
+  'NIFTY PVT BANK': 'niftyPvtBank',
+  'NIFTY COMMODITIES': 'cnxCommodities',
+  'NIFTY CONSUMPTION': 'cnxConsumption',
+  'NIFTY CPSE': 'cpse',
+  'NIFTY INFRA': 'cnxInfra',
+  'NIFTY MNC': 'cnxMNC',
+  'NIFTY GROWSECT 15': 'ni15',
+  'NIFTY PSE': 'cnxPSE',
+  'NIFTY SERV SECTOR': 'cnxService',
+  'NIFTY100 LIQ 15': 'nseliquid',
+  'NIFTY MID LIQ 15': 'niftyMidcapLiq15',
+  'NIFTY DIV OPPS 50': 'cnxDividendOppt',
+  'NIFTY50 VALUE 20': 'nv20',
+  'NIFTY QUALITY 30': 'niftyQuality30',
+  'NIFTY50 EQL WGT': 'nifty50EqualWeight',
+  'NIFTY100 EQL WGT': 'nifty100EqualWeight',
+  'NIFTY100 LOWVOL30': 'nifty100LowVolatility30',
+  'NIFTY ALPHA 50': 'niftyAlpha50',
+};
+
+module.exports = slugs;
