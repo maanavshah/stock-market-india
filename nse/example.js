@@ -180,7 +180,7 @@ getSectorsList()
 getQuotes()
 
 // Get info about a stock
-getQuoteInfo()
+getQuoteInfo('TCS')
 
 // Get the top gainers of NSE
 getGainers()
