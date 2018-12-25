@@ -1,2 +1,205 @@
 # stock-market-india
-API for Indian Stock Market's NSE and BSE.
+A npm package which fetches data from bombay & national stock exchange and provides an api to access it.
+
+
+## National Stock Exchange (NSE) API
+
+1. Get the stock market status (open/closed) - JSON
+http://localhost:3000/get_market_status
+
+2. Get all the indices of NSE(change, year high and low, index order) - JSON
+http://localhost:3000/nse/get_indices
+
+3. Get the quotes of all indexes in NSE - HTML
+http://localhost:3000/nse/get_quotes
+
+4. Get the quotation data of the symbol (companyName) from NSE - JSON
+http://localhost:3000/nse/get_quote_info?companyName=TCS
+
+5. Get the top 10 gainers of NSE - JSON
+http://localhost:3000/nse/get_gainers
+
+6. Get the top 10 losers of NSE - JSON
+http://localhost:3000/nse/get_losers
+
+7. Get advances/declines of individual index, and the value if its changed or not - JSON
+http://localhost:3000/nse/get_incline_decline
+
+8. Get the information of all the companies in a single NSE index (slug) JSON
+http://localhost:3000/nse/get_index_stocks?symbol=nifty
+
+9. Get the list of companies in provided NSE index with matching keyword data - JSON
+http://localhost:3000/nse/search_stocks?keyword=AXIS
+
+10. Get the intra day data of company in NSE - XML
+http://localhost:3000/nse/get_intra_day_data?companyName=TCS&time=1
+http://localhost:3000/nse/get_intra_day_data?companyName=TCS&time=month
+
+11. Get 52 weeks all high stocks in NSE - JSON
+http://localhost:3000/nse/get_52_week_high
+
+12. Get 52 weeks all low stocks in NSE - JSON
+http://localhost:3000/nse/get_52_week_low
+
+13. Get the NSE stocks whose values are highest - JSON
+http://localhost:3000/nse/get_top_value_stocks
+
+14. Get the NSE stocks whose volumes sold are highest - JSON
+http://localhost:3000/nse/get_top_volume_stocks
+
+15. Get the futures data for a company stock (symbol) and time - JSON
+http://localhost:3000/nse/get_stock_futures_data?companyName=TCS&time=15
+http://localhost:3000/nse/get_stock_futures_data?companyName=VEDL&time=month
+
+16. Get chart data of a companyName(symbol) depending on time in NSE - CSV Format (delimiter - |)
+http://localhost:3000/nse/get_chart_data_new?companyName=VEDL&time=5
+http://localhost:3000/nse/get_chart_data_new?companyName=VEDL&time=year
+
+- symbol (Slug List)
+```javascript
+
+ {
+  'NIFTY 50': 'nifty',
+  'NIFTY NEXT 50': 'juniorNifty',
+  'NIFTY MIDCAP 50': 'niftyMidcap50',
+  'NIFTY AUTO': 'cnxAuto',
+  'NIFTY BANK': 'bankNifty',
+  'NIFTY ENERGY': 'cnxEnergy',
+  'NIFTY FIN SERVICE': 'cnxFinance',
+  'NIFTY FMCG': 'cnxFMCG',
+  'NIFTY IT': 'cnxit',
+  'NIFTY MEDIA': 'cnxMedia',
+  'NIFTY METAL': 'cnxMetal',
+  'NIFTY PHARMA': 'cnxPharma',
+  'NIFTY PSU BANK': 'cnxPSU',
+  'NIFTY REALTY': 'cnxRealty',
+  'NIFTY PVT BANK': 'niftyPvtBank',
+  'NIFTY COMMODITIES': 'cnxCommodities',
+  'NIFTY CONSUMPTION': 'cnxConsumption',
+  'NIFTY CPSE': 'cpse',
+  'NIFTY INFRA': 'cnxInfra',
+  'NIFTY MNC': 'cnxMNC',
+  'NIFTY GROWSECT 15': 'ni15',
+  'NIFTY PSE': 'cnxPSE',
+  'NIFTY SERV SECTOR': 'cnxService',
+  'NIFTY100 LIQ 15': 'nseliquid',
+  'NIFTY MID LIQ 15': 'niftyMidcapLiq15',
+  'NIFTY DIV OPPS 50': 'cnxDividendOppt',
+  'NIFTY50 VALUE 20': 'nv20',
+  'NIFTY QUALITY 30': 'niftyQuality30',
+  'NIFTY50 EQL WGT': 'nifty50EqualWeight',
+  'NIFTY100 EQL WGT': 'nifty100EqualWeight',
+  'NIFTY100 LOWVOL30': 'nifty100LowVolatility30',
+  'NIFTY ALPHA 50': 'niftyAlpha50',
+
+
+  'INDIA VIX': '-',
+  'NIFTY 100': '-',
+  'NIFTY 500': '-',
+  'NIFTY MIDCAP 100': '-',
+  'NIFTY GS 11 15YR': '-',
+  'NIFTY50 PR 1X INV': '-',
+  'NIFTY GS COMPSITE': '-',
+  'NIFTY GS 15YRPLUS': '-',
+  'NIFTY50 PR 2X LEV': '-',
+  'NIFTY50 TR 1X INV': '-',
+  'NIFTY 200': '-',
+  'NIFTY GS 4 8YR': '-',
+  'NIFTY GS 8 13YR': '-',
+  'NIFTY50 TR 2X LEV': '-',
+  'NIFTY50 DIV POINT': '-',
+  'NIFTY SMLCAP 100': '-',
+  'NIFTY GS 10YR': '-',
+  'NIFTY GS 10YR CLN': '-',
+};
+
+```
+
+- companyName
+
+```javascript
+
+[ ACC, ADANIENT, ADANIPORTS, ADANIPOWER, AJANTPHARM, ALBK, AMARAJABAT, AMBUJACEM, APOLLOHOSP, APOLLOTYRE, ARVIND, ASHOKLEY, ASIANPAINT, AUROPHARMA, AXISBANK, BAJAJ-AUTO, BAJFINANCE, BAJAJFINSV, BALKRISIND, BANKBARODA, BANKINDIA, BATAINDIA, BEML, BERGEPAINT, BEL, BHARATFIN, BHARATFORG, BPCL, BHARTIARTL, INFRATEL, BHEL, BIOCON, BOSCHLTD, BRITANNIA, CADILAHC, CANFINHOME, CANBK, CAPF, CASTROLIND, CEATLTD, CENTURYTEX, CESC, CGPOWER, CHENNPETRO, CHOLAFIN, CIPLA, COALINDIA, COLPAL, CONCOR, CUMMINSIND, DABUR, DCBBANK, DHFL, DISHTV, DIVISLAB, DLF, DRREDDY, EICHERMOT, ENGINERSIN, EQUITAS, ESCORTS, EXIDEIND, FEDERALBNK, GAIL, GLENMARK, GMRINFRA, GODFRYPHLP, GODREJCP, GODREJIND, GRASIM, GSFC, HAVELLS, HCLTECH, HDFCBANK, HDFC, HEROMOTOCO, HEXAWARE, HINDALCO, HINDPETRO, HINDUNILVR, HINDZINC, ICICIBANK, ICICIPRULI, IDBI, IDEA, IDFCBANK, IDFC, IFCI, IBULHSGFIN, INDIANB, IOC, IGL, INDUSINDBK, INFIBEAM, INFY, INDIGO, IRB, ITC, JISLJALEQS, JPASSOCIAT, JETAIRWAYS, JINDALSTEL, JSWSTEEL, JUBLFOOD, JUSTDIAL, KAJARIACER, KTKBANK, KSCL, KOTAKBANK, KPIT, L&TFH, LT, LICHSGFIN, LUPIN, M&MFIN, MGL, M&M, MANAPPURAM, MRPL, MARICO, MARUTI, MFSL, MINDTREE, MOTHERSUMI, MRF, MCX, MUTHOOTFIN, NATIONALUM, NBCC, NCC, NESTLEIND, NHPC, NIITTECH, NMDC, NTPC, ONGC, OIL, OFSS, ORIENTBANK, PAGEIND, PCJEWELLER, PETRONET, PIDILITIND, PEL, PFC, POWERGRID, PTC, PNB, PVR, RAYMOND, RBLBANK, RELCAPITAL, RCOM, RELIANCE, RELINFRA, RPOWER, REPCOHOME, RECLTD, SHREECEM, SRTRANSFIN, SIEMENS, SREINFRA, SRF, SBIN, SAIL, STAR, SUNPHARMA, SUNTV, SUZLON, SYNDIBANK, TATACHEM, TATACOMM, TCS, TATAELXSI, TATAGLOBAL, TATAMTRDVR, TATAMOTORS, TATAPOWER, TATASTEEL, TECHM, INDIACEM, RAMCOCEM, SOUTHBANK, TITAN, TORNTPHARM, TORNTPOWER, TV18BRDCST, TVSMOTOR, UJJIVAN, ULTRACEMCO, UNIONBANK, UBL, MCDOWELL-N, UPL, VEDL, VGUARD, VOLTAS, WIPRO, WOCKPHARMA, YESBANK, ZEEL ]
+
+```
+
+- time
+
+```javascript
+
+var time = [1, 5, 15, 30, 60, 'week', 'month', 'year'] minutes
+
+```
+
+## Bombay Stock Exchange (BSE) API
+
+1. Get details of all index in BSE Stock exchange - JSON
+http://localhost:3000/bse/get_indices
+
+2. Get all the indices of NSE(Get the information of only a single index eg. SENSEX (16) - JSON
+http://localhost:3000/bse/getIndexInfo?indexId=16
+
+3. Get todays closing data and daily data of past time using IndexId and time from BSE  - JSON
+http://localhost:3000/bse/get_index_chart_data?indexId=16
+
+4. Get details of all the stocks in an index - JSON
+http://localhost:3000/bse/get_index_stocks?indexId=16
+
+5. Gets the StockValue, Volume for company in specified past time
+// 500112 - symbol (securityCode) of SBIN stock BSE
+http))://localhost:3000/bse/get_company_info?companyKey=500112
+
+6. Get the stocks chart data - JSON
+http://localhost:3000/bse/get_stocks_chart_data?companyKey=500325&time=5
+http://localhost:3000/bse/get_stocks_chart_data?companyKey=500325&time=month
+
+7. Get BSE stock data of stock info and day chart - HTML
+http://localhost:3000/bse/get_stock_info_and_day_chart_data?companyKey=500325
+
+8 Get the top gainers of BSE stock exchange - JSON
+http://localhost:3000/bse/get_gainers
+
+9. Get the top losers of BSE stock exchange - JSON
+http://localhost:3000/bse/get_losers
+
+10. Get the top turnovers of BSE stock exchange - JSON
+http://localhost:3000/bse/getTopTurnOvers
+
+- indexId (symbolKey)
+
+**`symbolKey` is different from `symbol` or `securityCode`, this value is present in response of getIndices method in 'key' property**
+
+**valid symbols for Index Futures and Options are `["BANKNIFTY","FTSE100","NIFTY","NIFTYINFRA","NIFTYIT","NIFTYMID50","NIFTYPSE"]`**
+
+- companyKey
+
+You can check the company key values using:
+
+```javascript
+
+https://github.com/maanavshah/stock-market-india/bse/constant/names.js
+
+```
+
+- time
+
+```javascript
+
+var time = [1, 5, 15, 30, 60, 'week', 'month', 'year'] minutes
+
+```
+
+## IMPORTANT
+
+> API Calls will fail when made from browser due to 'OPTIONS' request sent by browsers before making an API call and Have few 'insecure' headers set which fails when changed from browser.
+
+> WGet all the indices of NSE(orkaround is to make the call either on your server or in your app.
+
+### Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/maanavshah/stock-market-india. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+I give credits to https://github.com/kaushiknishchay/indian-stock-exchange, using which it was possible for me to create the library.
+
+### License
+
+The content of this repository is licensed under [MIT LICENSE](LICENSE).
