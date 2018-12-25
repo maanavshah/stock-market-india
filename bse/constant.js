@@ -1,4 +1,4 @@
-exports.INDICES_URL =  'https://www.bseindia.com/Msource/IndexMovers.aspx?ln=en';
+exports.INDICES_URL =  'https://api.bseindia.com/bseindia/api/Indexmasternew/GetData';
 exports.INDEX_INFO_URL = 'https://www.bseindia.com/SensexView/SensexViewbackPage.aspx';
 exports.INDICES_CHART_DATA_URL = 'https://www.bseindia.com/BSEGraph/Graphs/GetSensexViewData1.aspx?index=';
 exports.INDEX_HEAT_MAP_URL = 'https://www.bseindia.com/SensexView/HeatMapSensex.aspx?flag=HEAT&alpha=D';

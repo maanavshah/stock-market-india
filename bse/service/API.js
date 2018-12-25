@@ -74,7 +74,33 @@ function axiosTableTransformer(url) {
 }
 
 function getIndices() {
-  return axiosTransformer(INDICES_URL, INDICES_HEADERS);
+  return axios({
+    method: 'GET',
+    url: INDICES_URL,
+    params: {
+      json: {
+        "flag": "",
+        "ln": "en",
+        "pg": "1",
+        "cnt": "16",
+        "fields": "1,2,3,4,5,6,7",
+        "hmpg": "1"
+      }
+    }
+  }).then(response => {
+    return {
+      ...response,
+      data: response.data.map(index => {
+        return {
+          securityCode: index.indxnm,
+          key: index.code,
+          pointChange: index.chg,
+          todayClose: index.ltp,
+          pointPercent: index.perchg
+        }
+      })
+    }
+  });
 }
 
 function getIndexInfo(symbolKey) {
