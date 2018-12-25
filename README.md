@@ -4,58 +4,75 @@ A npm package which fetches data from bombay & national stock exchange and provi
 
 ## National Stock Exchange (NSE) API
 
-1. Get the stock market status (open/closed) - JSON
-http://localhost:3000/get_market_status
+- Get the stock market status (open/closed)<br/>
+Format: JSON<br/>
+http://localhost:3000/get_market_status<br/>
 
-2. Get all the indices of NSE(change, year high and low, index order) - JSON
-http://localhost:3000/nse/get_indices
+- Get all the indices of NSE(change, year high and low, index order)<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/get_indices<br/>
 
-3. Get the quotes of all indexes in NSE - HTML
-http://localhost:3000/nse/get_quotes
+- Get the quotes of all indexes in NSE<br/>
+Format: HTML<br/>
+http://localhost:3000/nse/get_quotes<br/>
 
-4. Get the quotation data of the symbol (companyName) from NSE - JSON
-http://localhost:3000/nse/get_quote_info?companyName=TCS
+- Get the quotation data of the symbol (companyName) from NSE<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/get_quote_info?companyName=TCS<br/>
 
-5. Get the top 10 gainers of NSE - JSON
-http://localhost:3000/nse/get_gainers
+- Get the top 10 gainers of NSE<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/get_gainers<br/>
 
-6. Get the top 10 losers of NSE - JSON
-http://localhost:3000/nse/get_losers
+- Get the top 10 losers of NSE<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/get_losers<br/>
 
-7. Get advances/declines of individual index, and the value if its changed or not - JSON
-http://localhost:3000/nse/get_incline_decline
+- Get advances/declines of individual index, and the value if its changed or not<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/get_incline_decline<br/>
 
-8. Get the information of all the companies in a single NSE index (slug) JSON
-http://localhost:3000/nse/get_index_stocks?symbol=nifty
+- Get the information of all the companies in a single NSE index<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/get_index_stocks?symbol=nifty<br/>
 
-9. Get the list of companies in provided NSE index with matching keyword data - JSON
-http://localhost:3000/nse/search_stocks?keyword=AXIS
+- Get the list of companies in provided NSE index with matching keyword data<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/search_stocks?keyword=AXIS<br/>
 
-10. Get the intra day data of company in NSE - XML
-http://localhost:3000/nse/get_intra_day_data?companyName=TCS&time=1
-http://localhost:3000/nse/get_intra_day_data?companyName=TCS&time=month
+- Get the intra day data of company in NSE<br/>
+Format: XML<br/>
+http://localhost:3000/nse/get_intra_day_data?companyName=TCS&time=1<br/>
+http://localhost:3000/nse/get_intra_day_data?companyName=TCS&time=month<br/>
 
-11. Get 52 weeks all high stocks in NSE - JSON
-http://localhost:3000/nse/get_52_week_high
+- Get 52 weeks all high stocks in NSE<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/get_52_week_high<br/>
 
-12. Get 52 weeks all low stocks in NSE - JSON
-http://localhost:3000/nse/get_52_week_low
+- Get 52 weeks all low stocks in NSE<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/get_52_week_low<br/>
 
-13. Get the NSE stocks whose values are highest - JSON
-http://localhost:3000/nse/get_top_value_stocks
+- Get the NSE stocks whose values are highest<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/get_top_value_stocks<br/>
 
-14. Get the NSE stocks whose volumes sold are highest - JSON
-http://localhost:3000/nse/get_top_volume_stocks
+- Get the NSE stocks whose volumes sold are highest<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/get_top_volume_stocks<br/>
 
-15. Get the futures data for a company stock (symbol) and time - JSON
-http://localhost:3000/nse/get_stock_futures_data?companyName=TCS&time=15
-http://localhost:3000/nse/get_stock_futures_data?companyName=VEDL&time=month
+- Get the futures data for a company stock (symbol) and time<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/get_stock_futures_data?companyName=TCS&time=15<br/>
+http://localhost:3000/nse/get_stock_futures_data?companyName=VEDL&time=month<br/>
 
-16. Get chart data of a companyName(symbol) depending on time in NSE - CSV Format (delimiter - |)
-http://localhost:3000/nse/get_chart_data_new?companyName=VEDL&time=5
-http://localhost:3000/nse/get_chart_data_new?companyName=VEDL&time=year
+- Get chart data of a companyName(symbol) depending on time in NSE<br/>
+Format: CSV Format (delimiter - |)<br/>
+http://localhost:3000/nse/get_chart_data_new?companyName=VEDL&time=5<br/>
+http://localhost:3000/nse/get_chart_data_new?companyName=VEDL&time=year<br/>
 
 - symbol (Slug List)
+
 ```javascript
 
  {
@@ -133,37 +150,47 @@ var time = [1, 5, 15, 30, 60, 'week', 'month', 'year'] minutes
 
 ## Bombay Stock Exchange (BSE) API
 
-1. Get details of all index in BSE Stock exchange - JSON
-http://localhost:3000/bse/get_indices
+- Get details of all index in BSE Stock exchange<br/>
+Format: JSON<br/>
+http://localhost:3000/bse/get_indices<br/>
 
-2. Get all the indices of NSE(Get the information of only a single index eg. SENSEX (16) - JSON
-http://localhost:3000/bse/getIndexInfo?indexId=16
+- Get all the indices of NSE(Get the information of only a single index<br/>
+Format: JSON<br/>
+http://localhost:3000/bse/getIndexInfo?indexId=16<br/>
 
-3. Get todays closing data and daily data of past time using IndexId and time from BSE  - JSON
-http://localhost:3000/bse/get_index_chart_data?indexId=16
+- Get todays closing data and daily data of past time using IndexId and time from BSE<br/>
+Format: JSON<br/>
+http://localhost:3000/bse/get_index_chart_data?indexId=16<br/>
 
-4. Get details of all the stocks in an index - JSON
-http://localhost:3000/bse/get_index_stocks?indexId=16
+- Get details of all the stocks in an index<br/>
+Format: JSON<br/>
+http://localhost:3000/bse/get_index_stocks?indexId=16<br/>
 
-5. Gets the StockValue, Volume for company in specified past time
-// 500112 - symbol (securityCode) of SBIN stock BSE
-http))://localhost:3000/bse/get_company_info?companyKey=500112
+- Gets the StockValue, Volume for company in specified past time<br/>
+// 500112 - symbol (securityCode) of SBIN stock BSE<br/>
+Format: JSON<br/>
+http://localhost:3000/bse/get_company_info?companyKey=500112<br/>
 
-6. Get the stocks chart data - JSON
-http://localhost:3000/bse/get_stocks_chart_data?companyKey=500325&time=5
-http://localhost:3000/bse/get_stocks_chart_data?companyKey=500325&time=month
+- Get the stocks chart data<br/>
+Format: JSON<br/>
+http://localhost:3000/bse/get_stocks_chart_data?companyKey=500325&time=5<br/>
+http://localhost:3000/bse/get_stocks_chart_data?companyKey=500325&time=month<br/>
 
-7. Get BSE stock data of stock info and day chart - HTML
-http://localhost:3000/bse/get_stock_info_and_day_chart_data?companyKey=500325
+- Get BSE stock data of stock info and day chart<br/>
+Format: HTML<br/>
+http://localhost:3000/bse/get_stock_info_and_day_chart_data?companyKey=500325<br/>
 
-8 Get the top gainers of BSE stock exchange - JSON
-http://localhost:3000/bse/get_gainers
+- Get the top gainers of BSE stock exchange<br/>
+Format: JSON<br/>
+http://localhost:3000/bse/get_gainers<br/>
 
-9. Get the top losers of BSE stock exchange - JSON
-http://localhost:3000/bse/get_losers
+- Get the top losers of BSE stock exchange<br/>
+Format: JSON<br/>
+http://localhost:3000/bse/get_losers<br/>
 
-10. Get the top turnovers of BSE stock exchange - JSON
-http://localhost:3000/bse/getTopTurnOvers
+- Get the top turnovers of BSE stock exchange<br/>
+Format: JSON<br/>
+http://localhost:3000/bse/getTopTurnOvers<br/>
 
 - indexId (symbolKey)
 
