@@ -216,6 +216,34 @@ var time = [1, 5, 15, 30, 60, 'week', 'month', 'year'] minutes
 
 ```
 
+## INSTALLATION
+
+Let's get step by step here.
+
+**Identify the location for your application.**
+
+Firs identify the location where for your application. Let's take it as /home/user/your_app. The path doesn’t matter, so feel free to locate the directory wherever it is best for you.
+
+**Installing Node.js**
+
+Here is where we will set up Node.js and Express. Node.js is a framework and Express provides a web server. The webserver we need does not need to do anything fancy. The only feature that the webserver needs are the ability to provide static files.
+
+To get started download and install Node.JS: [nodejs.org](http://nodejs.org/)
+
+**Install Express**
+
+Express is a package that executes within Node.js. To install express, in the Command Prompt navigate to your directory for the application which is  /home/user/your_app.
+
+Now let's install Express as a package for Node.js. At the command prompt type “npm install express”. That installed Express and should have created a directory called “node_modules”. 
+
+**Start Express Web Server in Node.js**
+
+In the terminal confirm you are at the  /home/user/your_app directory and execute the following command.
+
+> node app.js 3000
+
+Now the webserver should be running on port 3000 and you should be able to access the APIs.
+
 ## IMPORTANT
 
 > API Calls will fail when made from browser due to 'OPTIONS' request sent by browsers before making an API call and Have few 'insecure' headers set which fails when changed from browser.
