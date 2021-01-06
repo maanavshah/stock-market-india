@@ -1,5 +1,5 @@
 # stock-market-india
-A npm package which fetches data from bombay & national stock exchange and provides an api to access it.
+A npm package which fetches data from Bombay & National Stock Exchange and provides an API to access it.
 
 
 ## National Stock Exchange (NSE) API
@@ -40,7 +40,7 @@ http://localhost:3000/nse/get_index_stocks?symbol=nifty<br/>
 Format: JSON<br/>
 http://localhost:3000/nse/search_stocks?keyword=AXIS<br/>
 
-- Get the intra day data of company in NSE<br/>
+- Get the intraday data of company in NSE<br/>
 Format: XML<br/>
 http://localhost:3000/nse/get_intra_day_data?companyName=TCS&time=1<br/>
 http://localhost:3000/nse/get_intra_day_data?companyName=TCS&time=month<br/>
@@ -53,11 +53,11 @@ http://localhost:3000/nse/get_52_week_high<br/>
 Format: JSON<br/>
 http://localhost:3000/nse/get_52_week_low<br/>
 
-- Get the NSE stocks whose values are highest<br/>
+- Get the NSE stocks with highest values<br/>
 Format: JSON<br/>
 http://localhost:3000/nse/get_top_value_stocks<br/>
 
-- Get the NSE stocks whose volumes sold are highest<br/>
+- Get the NSE stocks with highest sold volumes<br/>
 Format: JSON<br/>
 http://localhost:3000/nse/get_top_volume_stocks<br/>
 
@@ -66,7 +66,7 @@ Format: JSON<br/>
 http://localhost:3000/nse/get_stock_futures_data?companyName=TCS&time=15<br/>
 http://localhost:3000/nse/get_stock_futures_data?companyName=VEDL&time=month<br/>
 
-- Get chart data of a companyName(symbol) depending on time in NSE<br/>
+- Get chart data of a company name(symbol) depending on time in NSE<br/>
 Format: CSV Format (delimiter - |)<br/>
 http://localhost:3000/nse/get_chart_data_new?companyName=VEDL&time=5<br/>
 http://localhost:3000/nse/get_chart_data_new?companyName=VEDL&time=year<br/>
@@ -222,7 +222,7 @@ Let's get step by step here.
 
 **Identify the location for your application.**
 
-First identify the location where for your application. Let's take it as /home/user/your_app. The path doesn’t matter, so feel free to locate the directory wherever it is best for you.
+First identify the location for your application. Let's take it as /home/user/your_app. The path doesn’t matter, so feel free to locate the directory wherever it is best for you.
 
 **Installing Node.js**
 
@@ -248,7 +248,7 @@ Now the webserver should be running on port 3000 and you should be able to acces
 
 > API Calls will fail when made from browser due to 'OPTIONS' request sent by browsers before making an API call and Have few 'insecure' headers set which fails when changed from browser.
 
-> WGet all the indices of NSE(orkaround is to make the call either on your server or in your app.
+> We Get all the indices of NSE (work around to make the call either on your server or in your app).
 
 ### Contributing
 
