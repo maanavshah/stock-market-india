@@ -222,7 +222,7 @@ Let's get step by step here.
 
 **Identify the location for your application.**
 
-Firs identify the location where for your application. Let's take it as /home/user/your_app. The path doesn’t matter, so feel free to locate the directory wherever it is best for you.
+First identify the location where for your application. Let's take it as /home/user/your_app. The path doesn’t matter, so feel free to locate the directory wherever it is best for you.
 
 **Installing Node.js**
 
