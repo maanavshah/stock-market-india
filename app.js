@@ -4,11 +4,12 @@ var API = require('./index');
 
 var BSEAPI = API.BSE;
 var NSEAPI = API.NSE;
+const PORT = process.env.PORT || 3000;
 
 var app = express();
 
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
 });
 
 // National Stock Exchange (NSE) APIS
