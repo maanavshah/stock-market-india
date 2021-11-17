@@ -169,8 +169,8 @@ function searchStocks(searchString) {
   var options = {
     headers: {
       'X-Requested-With': 'XMLHttpRequest',
-      'Referer': 'https://www.nseindia.com/ChartApp/install/charts/mainpage.jsp',
-      Host: 'www.nseindia.com'
+      'Referer': 'https://www1.nseindia.com/ChartApp/install/charts/mainpage.jsp',
+      Host: 'www1.nseindia.com'
     },
     transformResponse: searchTransformer(false)
   };
@@ -198,8 +198,8 @@ function getStockFuturesData(symbol, expiryDate, isIndex) {
     params: params,
     headers: {
       'X-Requested-With': 'XMLHttpRequest',
-      Host: 'www.nseindia.com',
-      'Referer': 'https://nseindia.com/live_market/dynaContent/live_watch/get_quote/GetQuoteFO.jsp?underlying=' + symbol + '&instrument=' + params['instrument'] + '&type=SELECT&strike=SELECT&expiry=' + expiryDate,
+      Host: 'www1.nseindia.com',
+      'Referer': 'https://www1.nseindia.com/live_market/dynaContent/live_watch/get_quote/GetQuoteFO.jsp?underlying=' + symbol + '&instrument=' + params['instrument'] + '&type=SELECT&strike=SELECT&expiry=' + expiryDate,
     }
   });
 }
@@ -210,8 +210,8 @@ function get52WeekHigh() {
     url: YEAR_HIGH_URL,
     headers: {
       'X-Requested-With': 'XMLHttpRequest',
-      Host: 'www.nseindia.com',
-      'Referer': 'https://nseindia.com/products/content/equities/equities/eq_new_high_low.htm'
+      Host: 'www1.nseindia.com',
+      'Referer': 'https://www1.nseindia.com/products/content/equities/equities/eq_new_high_low.htm'
     }
   });
 }
@@ -222,7 +222,7 @@ function get52WeekLow() {
     url: YEAR_LOW_URL,
     headers: {
       'X-Requested-With': 'XMLHttpRequest',
-      Host: 'www.nseindia.com',
+      Host: 'www1.nseindia.com',
       'Referer': 'https://nseindia.com/products/content/equities/equities/eq_new_high_low.htm'
     }
   });
@@ -234,8 +234,8 @@ function getTopValueStocks() {
     url: TOP_VALUE_URL,
     headers: {
       'X-Requested-With': 'XMLHttpRequest',
-      Host: 'www.nseindia.com',
-      'Referer': 'https://nseindia.com/live_market/dynaContent/live_analysis/most_active_securities.htm'
+      Host: 'www1.nseindia.com',
+      'Referer': 'https://www1.nseindia.com/live_market/dynaContent/live_analysis/most_active_securities.htm'
     }
   });
 }
@@ -246,8 +246,8 @@ function getTopVolumeStocks() {
     url: TOP_VOLUME_URL,
     headers: {
       'X-Requested-With': 'XMLHttpRequest',
-      Host: 'www.nseindia.com',
-      'Referer': 'https://nseindia.com/live_market/dynaContent/live_analysis/most_active_securities.htm'
+      Host: 'www1.nseindia.com',
+      'Referer': 'https://www1.nseindia.com/live_market/dynaContent/live_analysis/most_active_securities.htm'
     }
   });
 }
