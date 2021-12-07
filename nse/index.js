@@ -53,6 +53,19 @@ function getQuoteInfo(symbol) {
   return NSEAPI.getQuoteInfo(symbol);
 }
 
+/**
+ * Get info for multiple company at once
+ * @param symbols {[string]} symbols of companies
+ *
+ * @returns {object}
+ */
+function getMultipleQuoteInfo(symbols) {
+  return Promise.all(symbols.map(async (symbol) => {
+    const res = await NSEAPI.getQuoteInfo(symbol)
+    return res.data;
+  }))
+}
+
 
 /**
  * Get List of Gainers
@@ -161,6 +174,7 @@ var nse = {
   getSectorsList: getSectorsList,
   getQuotes: getQuotes,
   getQuoteInfo: getQuoteInfo,
+  getMultipleQuoteInfo: getMultipleQuoteInfo,
   getGainers: getGainers,
   getLosers: getLosers,
   getInclineDecline: getInclineDecline,

@@ -50,6 +50,13 @@ app.get("/nse/get_quote_info", (req, res, next) => {
     });
 });
 
+// Get the quotation data of the symbols (companyNames) from NSE - JSON
+// Example: http://localhost:3000/nse/get_multiple_quote_info?companyNames=TCS,WIPRO
+app.get("/nse/get_multiple_quote_info", (req, res, next) => {
+  const companyNames = req.query.companyNames.split(",");
+  NSEAPI.getMultipleQuoteInfo(companyNames).then(r =>  res.json(r));
+});
+
 // Get the top 10 gainers of NSE - JSON
 // Example: http://localhost:3000/nse/get_gainers
 app.get("/nse/get_gainers", (req, res, next) => {
