@@ -20,6 +20,10 @@ http://localhost:3000/nse/get_quotes<br/>
 Format: JSON<br/>
 http://localhost:3000/nse/get_quote_info?companyName=TCS<br/>
 
+- Get the quotation data of the symbols (companyNames) from NSE - JSON<br/>
+Format: JSON<br/>
+http://localhost:3000/nse/get_multiple_quote_info?companyNames=TCS,WIPRO,AND_MORE<br/>
+
 - Get the top 10 gainers of NSE<br/>
 Format: JSON<br/>
 http://localhost:3000/nse/get_gainers<br/>
