@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+@import url('http://fonts.cdnfonts.com/css/geomanist');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    transition: all 0.2s ease-in-out;
+}
+
+.gradient__text { 
+    color: #007004;
+    background-image: -webkit-linear-gradient(0deg, #007004 0%, #009688 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient__bg {
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    background-attachment: fixed;
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-text {
+    font-weight: 400;
+    /* line-height: 2.5rem; */
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    font-size: 1.5rem;
+}
+
+.route-desc{
+    color: #333333;
+    font-weight: 500;
+    font-size: 1.8rem;
+    font-family: 'Geomanist', sans-serif;
+}
+
+h3, h2 {
+    font-weight: 600;
+}
+
+header {
+    margin-top: 2.5rem;
+}
+
+#title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    word-spacing: 0.8rem;
+    text-align: center;
+    font-family: 'Geomanist', sans-serif;
+}
+
+.repolink {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.repolink span {
+    color: #0e5ed4;
+}
+
+.repolink a:hover {
+    font-size: 1.7rem;
+    color: #0e5ed4;
+}
+
+.container {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+}
+
+.badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.badges img {
+    margin: 0 1rem;
+}
+
+.api-routes{
+    text-align: center;
+    font-size: 3rem;
+    
+    margin-top: 2rem;
+}
+
+#nse,#bse{
+    text-align: center;
+}
+
+.api-example {
+    margin: 3rem 0;
+}
+
+
+.api-example p:nth-child(2) {
+    padding-top: 1rem;
+    color: #2e8b57;
+    margin-bottom: 0.5rem;
+}
+.api-example p:nth-child(3) {
+    padding-top: 1rem;
+    color: #2e8b57;
+    margin-bottom: 0.5rem;
+}
+
+#base-url a:hover {
+    font-size: 1.6rem;
+    color: #0e5ed4;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.author {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.author a:hover {
+    color: #0e5ed4;
+    font-size: 1.2rem;
+    border-bottom: 0.1rem solid #000;
+}
+
+@media screen and (max-width:750px) {
+    html {
+        font-size: 10px;
+    }
+
+    .container {
+        margin: 2rem 8rem 0 8rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    html {
+        font-size: 9px;
+    }
+
+    .container {
+        margin: 1rem 5rem 0 5rem;
+    }
+}
+
+@media screen and (max-width:410px) {
+    html {
+        font-size: 8px;
+    }
+
+    .repolink {
+        margin: 0 2rem;
+    }
+
+    .badges {
+        flex-wrap: wrap;
+    }
+
+    .badges>* {
+        padding-top: 1rem;
+    }
+
+
+    .container {
+        margin: 1rem 3rem 0 3rem;
+    }
+}

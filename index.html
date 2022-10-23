@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Stock Market Data</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="gradient__bg">
+    <header class="flex-box">
+        <div class="heading">
+            <h1 id="title" class="gradient__text">Stock Market Data</h1>
+        </div>
+        <div class="repolink">
+            <p class="p-text"><span>GitHub:</span> <a href="https://github.com/maanavshah/stock-market-india"
+                    target="_">https://github.com/maanavshah/stock-market-india</a> </p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="badges">
+            <img id="licence" src="https://img.shields.io/badge/license-MIT-%2395c20d" alt="license" />
+        </div>
+        <h2 class="api-routes">API Routes/Endpoints</h2>
+
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Check Market Status</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/get_market_status"
+                    target="_blank">http://localhost:3000/get_market_status</a></p>
+        </div>
+
+        <!-- NSE Endpoints -->
+        <h2 id="nse">National Stock Exchange(NSE)</h2>
+
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get all the indices of NSE(change, year high and low, index order)</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/nse/get_indices"
+                    target="_blank">/nse/get_indices</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the quotes of all indexes in NSE</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/nse/get_quotes"
+                    target="_blank">/nse/get_quotes</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the quotation data of the symbol (companyName) from NSE</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/nse/get_quote_info?companyName=MARUTI"
+                    target="_blank">/nse/get_quote_info?companyName=MARUTI</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the quotation data of the symbols (companyNames) from NSE</p>
+            <p id="base-url" class="p-text">URL: <a
+                    href="http://localhost:3000/nse/get_multiple_quote_info?companyNames=TCS,WIPRO,AND_MORE"
+                    target="_blank">/nse/get_multiple_quote_info?companyNames=TCS,WIPRO,AND_MORE</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the top 10 gainers of NSE</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/nse/get_gainers"
+                    target="_blank">/nse/get_gainers</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the top 10 losers of NSE</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/nse/get_losers"
+                    target="_blank">/nse/get_losers</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get advances/declines of individual index, and the value if its changed or not
+            </p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/nse/get_incline_decline"
+                    target="_blank">/nse/get_incline_decline</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get advances/declines of individual index, and the value if its changed or not
+            </p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/nse/get_index_stocks?symbol=nifty"
+                    target="_blank">/nse/get_index_stocks?symbol=nifty</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the list of companies in provided NSE index with matching keyword data</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/nse/search_stocks?keyword=AXIS"
+                    target="_blank">/nse/search_stocks?keyword=AXIS</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the intraday data of company in NSE</p>
+            <p id="base-url" class="p-text">URL: <a
+                    href="http://localhost:3000/nse/get_intra_day_data?companyName=TCS&time=1"
+                    target="_blank">/nse/get_intra_day_data?companyName=TCS&time=1</a></p>
+            <p id="base-url" class="p-text">URL: <a
+                    href="http://localhost:3000/nse/get_intra_day_data?companyName=TCS&time=month"
+                    target="_blank">/nse/get_intra_day_data?companyName=TCS&time=month</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get 52 weeks all high stocks in NSE</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/nse/get_52_week_high"
+                    target="_blank">/nse/get_52_week_high</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get 52 weeks all low stocks in NSE</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/nse/get_52_week_low"
+                    target="_blank">/nse/get_52_week_low</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the NSE stocks with highest values</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/nse/get_top_value_stocks"
+                    target="_blank">/nse/get_top_value_stocks</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the NSE stocks with highest sold volumes</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/nse/get_top_volume_stocks"
+                    target="_blank">/nse/get_top_volume_stocks</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the futures data for a company stock (symbol) and time</p>
+            <p id="base-url" class="p-text">URL: <a
+                    href="http://localhost:3000/nse/get_stock_futures_data?companyName=TCS&time=15"
+                    target="_blank">/nse/get_stock_futures_data?companyName=TCS&time=15</a></p>
+            <p id="base-url" class="p-text">URL: <a
+                    href="http://localhost:3000/nse/get_stock_futures_data?companyName=VEDL&time=month"
+                    target="_blank">/nse/get_stock_futures_data?companyName=VEDL&time=month</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get chart data of a company name(symbol) depending on time in NSE</p>
+            <p id="base-url" class="p-text">URL: <a
+                    href="http://localhost:3000/nse/get_chart_data_new?companyName=VEDL&time=5"
+                    target="_blank">/nse/get_chart_data_new?companyName=VEDL&time=5</a></p>
+            <p id="base-url" class="p-text">URL: <a
+                    href="http://localhost:3000/nse/get_chart_data_new?companyName=VEDL&time=year"
+                    target="_blank">/nse/get_chart_data_new?companyName=VEDL&time=year</a></p>
+        </div>
+
+        <!-- BSE Endpoints -->
+        <h2 id="nse">Bombay Stock Exchange(BSE)</h2>
+
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get details of all index in BSE Stock exchange</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/bse/get_indices"
+                    target="_blank">/bse/get_indices</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get all the indices of NSE(Get the information of only a single index</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/bse/get_indices"
+                    target="_blank">/bse/get_indices</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get today's closing data and daily data of past time using IndexId and time
+                from BSE</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/bse/get_index_chart_data?indexId=16"
+                    target="_blank">/bse/get_index_chart_data?indexId=16</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Gets the StockValue, Volume for company in specified past time <br> // 500112 -
+                symbol (securityCode) of SBIN stock BSE</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/bse/get_company_info?companyKey=500112"
+                    target="_blank">/bse/get_company_info?companyKey=500112</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the stocks chart data</p>
+            <p id="base-url" class="p-text">URL: <a
+                    href="http://localhost:3000/bse/get_chart_data?companyName=VEDL&time=5"
+                    target="_blank">/bse/get_chart_data_new?companyName=VEDL&time=5</a></p>
+            <p id="base-url" class="p-text">URL: <a
+                    href="http://localhost:3000/bse/get_chart_data?companyName=VEDL&time=year"
+                    target="_blank">/bse/get_chart_data_new?companyName=VEDL&time=year</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get BSE stock data of stock info and day chart</p>
+            <p id="base-url" class="p-text">URL: <a
+                    href="http://localhost:3000/bse/get_stock_info_and_day_chart_data?companyKey=500325"
+                    target="_blank">/bse/get_stock_info_and_day_chart_data?companyKey=500325</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the top gainers of BSE stock exchange</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/bse/get_gainers"
+                    target="_blank">/bse/get_gainers</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the top losers of BSE stock exchange</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/bse/get_losers"
+                    target="_blank">/bse/get_losers</a></p>
+        </div>
+        <div class="api-example ">
+            <p class="route-desc">&#8594 Get the top turnovers of BSE stock exchange</p>
+            <p id="base-url" class="p-text">URL: <a href="http://localhost:3000/bse/getTopTurnOvers"
+                    target="_blank">/bse/getTopTurnOvers</a></p>
+        </div>
+    </div>
+
+    <footer class="p-text">
+        <div class="author">
+            <p>Index made with &#x2764;&#xFE0F by <a href="https://github.com/nkilm" target="_blank">Nikhil Mohite(@nkilm)</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

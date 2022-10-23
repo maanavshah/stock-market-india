@@ -1,12 +1,19 @@
 // var API = require('indian-stock-exchange');
 var express = require("express");
 var API = require('./index');
+var path = require('path');
 
 var BSEAPI = API.BSE;
 var NSEAPI = API.NSE;
 const PORT = process.env.PORT || 3000;
 
 var app = express();
+
+app.use(express.static(path.join(__dirname,"public")));
+
+app.get("/",(req,res)=>{
+  res.sendFile(__dirname+"/index.html")
+})
 
 app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
