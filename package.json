@@ -7,10 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js 3000"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maanavshah/stock-market-india.git"
-  },
   "keywords": [
     "api",
     "indian",
@@ -23,12 +19,8 @@
     "node",
     "express"
   ],
-  "author": "Maanav Shah",
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/maanavshah/stock-market-india/issues"
-  },
-  "homepage": "https://github.com/maanavshah/stock-market-india#readme",
   "dependencies": {
     "axios": "^0.18.1",
     "express": "^4.16.4",
